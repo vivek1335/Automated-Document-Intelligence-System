@@ -1,34 +1,30 @@
 # Automated-Document-Intelligence-System
 
-Automated Document Intelligence System automatically processes documents (PDFs, Word files, or text files) and extracts key insights, including summaries, named entities, keywords, and sentiment analysis. It can be applied in business intelligence, legal tech, finance, and research.
+IntelliDoc is an AI-based document intelligence platform that automatically extracts key insights from structured documents (PDFs, reports, invoices) using layout-aware NLP (LayoutLMv3) and LangChain for advanced processing. It reduces manual review time by automating sentiment analysis and data extraction.
 
 **Features**
 
-Document Loading: Supports PDF, DOCX, and plain text files.
+Document Parsing: Handles PDFs with complex layouts using LayoutLMv3.
 
-Text Preprocessing: Cleans and normalizes text for NLP analysis.
+Layout-Aware NLP: Extracts tables, text blocks, headers, and key-value pairs.
 
-Keyword Extraction: Identifies important keywords or phrases from the document.
+Sentiment Analysis: Evaluates sentiment of financial narratives automatically.
 
-Named Entity Recognition (NER): Detects entities like people, organizations, dates, and locations.
+LangChain Integration: Chains multiple AI models for processing, summarization, and reasoning.
 
-Document Summarization: Produces concise summaries of long documents.
+Batch Processing: Supports multiple documents.
 
-Sentiment Analysis: Detects the overall sentiment (positive, negative, neutral).
-
-Export Results: Saves extracted insights to CSV or JSON.
+Export Results: Saves insights to CSV or JSON.
 
 **Requirements**
 
-pip install pandas numpy spacy nltk PyPDF2 python-docx gensim
-python -m spacy download en_core_web_sm
+pip install torch transformers langchain pandas
+pip install pdfplumber
 
-PyPDF2 → read PDF files
+transformers → for LayoutLMv3
 
-python-docx → read DOCX files
+langchain → for chaining AI operations
 
-spaCy → NER and NLP preprocessing
+pdfplumber → for extracting text from PDFs
 
-gensim → text summarization
-
-nltk → text cleaning and sentiment analysis
+pandas → for saving results
